@@ -6,7 +6,7 @@ import simplekml # .kml file generator
 from polycircles import polycircles # .kml file circle generator
 
 kml = simplekml.Kml() # Initialize kml
-'''
+
 root = Tk() # Initialize main GUI window
 root.withdraw() # Hide GUI window
 
@@ -19,8 +19,8 @@ root.filename = filedialog.askopenfilename(initialdir=cwd,
 
 
 root.destroy() # Close GUI window
-'''
-with open("NOTAM2.txt", 'r') as file:
+
+with open(root.filename, 'r') as file:
     data = file.read().replace('\n', ' ') # Read NOTAM txt
 
 #------------------ Define regular expressions
